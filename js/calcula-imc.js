@@ -32,10 +32,16 @@ if (altura < 0 || altura > 3){
 
 if(alturaEhValida && pesoEhValido){
 var imc = peso / (altura * altura);
-tdImc.textContent = imc.toFixed(2);
+tdImc.textContent = imc;
 }
 
 });
+
+function calcularImc(peso, altura){
+    var imc = 0;
+    imc = peso / (altura*altura);
+    return imc.toFixed(2);
+}
 
 titulo.addEventListener("click", function(){
     console.log("Função anonima");
